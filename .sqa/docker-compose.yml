@@ -1,5 +1,5 @@
 services:
-  qc.fair_pokey-pear-earwig:
+  qc.fair_crabby-fuchsia-rattlesnake:
     command: sleep 6000000
     image: ferag/fair_eva:fair
     volumes:
