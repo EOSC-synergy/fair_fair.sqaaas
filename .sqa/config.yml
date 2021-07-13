@@ -10,6 +10,8 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - /bin/curl localhost
-        container: qc.fair_pokey-pear-earwig
+        - '/bin/curl -H ''Content-Type: application/json'' -X POST -d ''{"id": "10261/157765",
+          "repo": "oai-pmh", "oai_base": "http://digital.csic.es/dspace-oai/request"}''
+          http://localhost:9090/v1.0/rda/rda_all'
+        container: qc.fair_crabby-fuchsia-rattlesnake
 timeout: 600
