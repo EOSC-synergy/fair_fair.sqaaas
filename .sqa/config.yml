@@ -1,14 +1,15 @@
 config:
+  credentials: []
   project_repos:
-    myrepo:
-      repo: 'https://github.com/EOSC-synergy/FAIR_eva'
-
+    github.com/EOSC-synergy/sqa-composer-templates:
+      branch: feature/dynamic_tool_gathering
+      repo: https://github.com/EOSC-synergy/sqa-composer-templates
+environment: {}
 sqa_criteria:
-  qc_style:
+  QC.FAIR:
     repos:
-      myrepo:
-        container: faireva-testing
-        tox:
-          tox_file: '/faireva-testing/tox.ini'
-          testenv:
-            - pep8
+      this_repo:
+        commands:
+        - /bin/curl localhost
+        container: qc.fair_pokey-pear-earwig
+timeout: 600
